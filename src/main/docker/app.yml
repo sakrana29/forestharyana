@@ -1,0 +1,25 @@
+version: '2'
+services:
+    forestharyana-app:
+        image: forestharyana
+        environment:
+            - _JAVA_OPTIONS=-Xmx512m -Xms256m
+            - SPRING_PROFILES_ACTIVE=prod,swagger
+            - SPRING_DATA_CASSANDRA_CONTACTPOINTS=forestharyana-cassandra
+            - JHIPSTER_SLEEP=30 # gives time for the Cassandra cluster to start and execute the migration scripts
+        ports:
+            - 8080:8080
+    forestharyana-cassandra:
+        extends:
+            file: cassandra-cluster.yml
+            service: forestharyana-cassandra
+    forestharyana-cassandra-node:
+        image: cassandra:3.9
+        environment:
+            - CASSANDRA_SEEDS=forestharyana-cassandra
+    forestharyana-cassandra-migration:
+        extends:
+            file: cassandra-migration.yml
+            service: forestharyana-cassandra-migration
+        environment:
+            - CREATE_KEYSPACE_SCRIPT=create-keyspace-prod.cql

@@ -1,0 +1,36 @@
+{
+    "generator-jhipster": {
+        "promptValues": {
+            "packageName": "com.haryana.forest",
+            "nativeLanguage": "en"
+        },
+        "jhipsterVersion": "5.7.2",
+        "applicationType": "monolith",
+        "baseName": "forestharyana",
+        "packageName": "com.haryana.forest",
+        "packageFolder": "com/haryana/forest",
+        "serverPort": "8080",
+        "authenticationType": "jwt",
+        "cacheProvider": "ehcache",
+        "enableHibernateCache": false,
+        "websocket": "spring-websocket",
+        "databaseType": "cassandra",
+        "devDatabaseType": "cassandra",
+        "prodDatabaseType": "cassandra",
+        "searchEngine": false,
+        "messageBroker": false,
+        "serviceDiscoveryType": false,
+        "buildTool": "maven",
+        "enableSwaggerCodegen": false,
+        "jwtSecretKey": "ZTYwNTFiYTQyYzdlMTNmZjBjMDAxNTYzOGZhMGFmZDM4NzBmZTQwZDczZjIxN2RkZmI5MjUwMmU3ZmRmMzM0NzhhZWJjYjdhYzlkZjlmY2FkOTVlZmI0NGEzZjdhYzEzN2YxNTY2NzIzNmU4ZjMzNTk1NTc5YTQ4MDNmZGE3NGQ=",
+        "clientFramework": "angularX",
+        "useSass": false,
+        "clientPackageManager": "npm",
+        "testFrameworks": ["gatling"],
+        "jhiPrefix": "jhi",
+        "otherModules": [],
+        "enableTranslation": true,
+        "nativeLanguage": "en",
+        "languages": ["en", "hi"]
+    }
+}
