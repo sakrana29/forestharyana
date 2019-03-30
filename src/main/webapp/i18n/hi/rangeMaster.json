@@ -1,0 +1,28 @@
+{
+    "forestharyanaApp": {
+        "rangeMaster": {
+            "home": {
+                "title": "RangeMasters",
+                "createLabel": "नया Range Master बनाएँ",
+                "createOrEditLabel": "Range Master बनाएँ या संपादित करें"
+            },
+            "created": "एक नया Range Master [identifier: {{ param }}] तैयार है",
+            "updated": "एक Range Master [identifier: {{ param }}] का अद्यतन हुआ है",
+            "deleted": "Range Master [identifier: {{ param }}] हटा दिया है",
+            "delete": {
+                "question": "Range Master [id: {{ id }}] हटाने की पुष्टि करें"
+            },
+            "detail": {
+                "title": "Range Master"
+            },
+            "rangeName": "Range Name",
+            "divisionNmae": "Division Nmae",
+            "divisionId": "Division Id",
+            "circleName": "Circle Name",
+            "circleId": "Circle Id",
+            "stateName": "State Name",
+            "isActive": "Is Active",
+            "stateId": "State Id"
+        }
+    }
+}

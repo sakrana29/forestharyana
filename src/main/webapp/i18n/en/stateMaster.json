@@ -1,0 +1,22 @@
+{
+    "forestharyanaApp": {
+        "stateMaster": {
+            "home": {
+                "title": "State Masters",
+                "createLabel": "Create a new State Master",
+                "createOrEditLabel": "Create or edit a State Master"
+            },
+            "created": "A new State Master is created with identifier {{ param }}",
+            "updated": "A State Master is updated with identifier {{ param }}",
+            "deleted": "A State Master is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete State Master {{ id }}?"
+            },
+            "detail": {
+                "title": "State Master"
+            },
+            "stateName": "State Name",
+            "isActive": "Is Active"
+        }
+    }
+}

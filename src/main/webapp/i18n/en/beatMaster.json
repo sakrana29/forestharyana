@@ -1,0 +1,32 @@
+{
+    "forestharyanaApp": {
+        "beatMaster": {
+            "home": {
+                "title": "Beat Masters",
+                "createLabel": "Create a new Beat Master",
+                "createOrEditLabel": "Create or edit a Beat Master"
+            },
+            "created": "A new Beat Master is created with identifier {{ param }}",
+            "updated": "A Beat Master is updated with identifier {{ param }}",
+            "deleted": "A Beat Master is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Beat Master {{ id }}?"
+            },
+            "detail": {
+                "title": "Beat Master"
+            },
+            "beatName": "Beat Name",
+            "blockName": "Block Name",
+            "blockId": "Block Id",
+            "rangeName": "Range Name",
+            "rangeId": "Range Id",
+            "divisionName": "Division Name",
+            "divisionId": "Division Id",
+            "circleName": "Circle Name",
+            "circleId": "Circle Id",
+            "stateName": "State Name",
+            "stateId": "State Id",
+            "isActive": "Is Active"
+        }
+    }
+}

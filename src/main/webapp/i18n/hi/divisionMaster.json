@@ -1,0 +1,26 @@
+{
+    "forestharyanaApp": {
+        "divisionMaster": {
+            "home": {
+                "title": "DivisionMasters",
+                "createLabel": "नया Division Master बनाएँ",
+                "createOrEditLabel": "Division Master बनाएँ या संपादित करें"
+            },
+            "created": "एक नया Division Master [identifier: {{ param }}] तैयार है",
+            "updated": "एक Division Master [identifier: {{ param }}] का अद्यतन हुआ है",
+            "deleted": "Division Master [identifier: {{ param }}] हटा दिया है",
+            "delete": {
+                "question": "Division Master [id: {{ id }}] हटाने की पुष्टि करें"
+            },
+            "detail": {
+                "title": "Division Master"
+            },
+            "divisionName": "Division Name",
+            "circleName": "Circle Name",
+            "circleId": "Circle Id",
+            "stateName": "State Name",
+            "stateId": "State Id",
+            "isActive": "Is Active"
+        }
+    }
+}

@@ -1,0 +1,55 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="rangeMaster">
+            <h2><span jhiTranslate="forestharyanaApp.rangeMaster.detail.title">Range Master</span> {{rangeMaster.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="forestharyanaApp.rangeMaster.rangeName">Range Name</span></dt>
+                <dd>
+                    <span>{{rangeMaster.rangeName}}</span>
+                </dd>
+                <dt><span jhiTranslate="forestharyanaApp.rangeMaster.divisionNmae">Division Nmae</span></dt>
+                <dd>
+                    <span>{{rangeMaster.divisionNmae}}</span>
+                </dd>
+                <dt><span jhiTranslate="forestharyanaApp.rangeMaster.divisionId">Division Id</span></dt>
+                <dd>
+                    <span>{{rangeMaster.divisionId}}</span>
+                </dd>
+                <dt><span jhiTranslate="forestharyanaApp.rangeMaster.circleName">Circle Name</span></dt>
+                <dd>
+                    <span>{{rangeMaster.circleName}}</span>
+                </dd>
+                <dt><span jhiTranslate="forestharyanaApp.rangeMaster.circleId">Circle Id</span></dt>
+                <dd>
+                    <span>{{rangeMaster.circleId}}</span>
+                </dd>
+                <dt><span jhiTranslate="forestharyanaApp.rangeMaster.stateName">State Name</span></dt>
+                <dd>
+                    <span>{{rangeMaster.stateName}}</span>
+                </dd>
+                <dt><span jhiTranslate="forestharyanaApp.rangeMaster.isActive">Is Active</span></dt>
+                <dd>
+                    <span>{{rangeMaster.isActive}}</span>
+                </dd>
+                <dt><span jhiTranslate="forestharyanaApp.rangeMaster.stateId">State Id</span></dt>
+                <dd>
+                    <span>{{rangeMaster.stateId}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/range-master', rangeMaster.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

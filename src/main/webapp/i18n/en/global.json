@@ -7,6 +7,12 @@
             "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
             "entities": {
                 "main": "Entities",
+                "stateMaster": "State Master",
+                "circleMaster": "Circle Master",
+                "divisionMaster": "Division Master",
+                "rangeMaster": "Range Master",
+                "blockMaster": "Block Master",
+                "beatMaster": "Beat Master",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {

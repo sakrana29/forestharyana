@@ -1,0 +1,30 @@
+{
+    "forestharyanaApp": {
+        "blockMaster": {
+            "home": {
+                "title": "BlockMasters",
+                "createLabel": "नया Block Master बनाएँ",
+                "createOrEditLabel": "Block Master बनाएँ या संपादित करें"
+            },
+            "created": "एक नया Block Master [identifier: {{ param }}] तैयार है",
+            "updated": "एक Block Master [identifier: {{ param }}] का अद्यतन हुआ है",
+            "deleted": "Block Master [identifier: {{ param }}] हटा दिया है",
+            "delete": {
+                "question": "Block Master [id: {{ id }}] हटाने की पुष्टि करें"
+            },
+            "detail": {
+                "title": "Block Master"
+            },
+            "blockName": "Block Name",
+            "rangeName": "Range Name",
+            "rangeId": "Range Id",
+            "divisionName": "Division Name",
+            "divisionId": "Division Id",
+            "circleName": "Circle Name",
+            "circleId": "Circle Id",
+            "stateName": "State Name",
+            "stateId": "State Id",
+            "isActive": "Is Active"
+        }
+    }
+}

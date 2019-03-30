@@ -1,0 +1,63 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="blockMaster">
+            <h2><span jhiTranslate="forestharyanaApp.blockMaster.detail.title">Block Master</span> {{blockMaster.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="forestharyanaApp.blockMaster.blockName">Block Name</span></dt>
+                <dd>
+                    <span>{{blockMaster.blockName}}</span>
+                </dd>
+                <dt><span jhiTranslate="forestharyanaApp.blockMaster.rangeName">Range Name</span></dt>
+                <dd>
+                    <span>{{blockMaster.rangeName}}</span>
+                </dd>
+                <dt><span jhiTranslate="forestharyanaApp.blockMaster.rangeId">Range Id</span></dt>
+                <dd>
+                    <span>{{blockMaster.rangeId}}</span>
+                </dd>
+                <dt><span jhiTranslate="forestharyanaApp.blockMaster.divisionName">Division Name</span></dt>
+                <dd>
+                    <span>{{blockMaster.divisionName}}</span>
+                </dd>
+                <dt><span jhiTranslate="forestharyanaApp.blockMaster.divisionId">Division Id</span></dt>
+                <dd>
+                    <span>{{blockMaster.divisionId}}</span>
+                </dd>
+                <dt><span jhiTranslate="forestharyanaApp.blockMaster.circleName">Circle Name</span></dt>
+                <dd>
+                    <span>{{blockMaster.circleName}}</span>
+                </dd>
+                <dt><span jhiTranslate="forestharyanaApp.blockMaster.circleId">Circle Id</span></dt>
+                <dd>
+                    <span>{{blockMaster.circleId}}</span>
+                </dd>
+                <dt><span jhiTranslate="forestharyanaApp.blockMaster.stateName">State Name</span></dt>
+                <dd>
+                    <span>{{blockMaster.stateName}}</span>
+                </dd>
+                <dt><span jhiTranslate="forestharyanaApp.blockMaster.stateId">State Id</span></dt>
+                <dd>
+                    <span>{{blockMaster.stateId}}</span>
+                </dd>
+                <dt><span jhiTranslate="forestharyanaApp.blockMaster.isActive">Is Active</span></dt>
+                <dd>
+                    <span>{{blockMaster.isActive}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/block-master', blockMaster.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

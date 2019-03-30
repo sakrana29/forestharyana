@@ -1,0 +1,71 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="beatMaster">
+            <h2><span jhiTranslate="forestharyanaApp.beatMaster.detail.title">Beat Master</span> {{beatMaster.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="forestharyanaApp.beatMaster.beatName">Beat Name</span></dt>
+                <dd>
+                    <span>{{beatMaster.beatName}}</span>
+                </dd>
+                <dt><span jhiTranslate="forestharyanaApp.beatMaster.blockName">Block Name</span></dt>
+                <dd>
+                    <span>{{beatMaster.blockName}}</span>
+                </dd>
+                <dt><span jhiTranslate="forestharyanaApp.beatMaster.blockId">Block Id</span></dt>
+                <dd>
+                    <span>{{beatMaster.blockId}}</span>
+                </dd>
+                <dt><span jhiTranslate="forestharyanaApp.beatMaster.rangeName">Range Name</span></dt>
+                <dd>
+                    <span>{{beatMaster.rangeName}}</span>
+                </dd>
+                <dt><span jhiTranslate="forestharyanaApp.beatMaster.rangeId">Range Id</span></dt>
+                <dd>
+                    <span>{{beatMaster.rangeId}}</span>
+                </dd>
+                <dt><span jhiTranslate="forestharyanaApp.beatMaster.divisionName">Division Name</span></dt>
+                <dd>
+                    <span>{{beatMaster.divisionName}}</span>
+                </dd>
+                <dt><span jhiTranslate="forestharyanaApp.beatMaster.divisionId">Division Id</span></dt>
+                <dd>
+                    <span>{{beatMaster.divisionId}}</span>
+                </dd>
+                <dt><span jhiTranslate="forestharyanaApp.beatMaster.circleName">Circle Name</span></dt>
+                <dd>
+                    <span>{{beatMaster.circleName}}</span>
+                </dd>
+                <dt><span jhiTranslate="forestharyanaApp.beatMaster.circleId">Circle Id</span></dt>
+                <dd>
+                    <span>{{beatMaster.circleId}}</span>
+                </dd>
+                <dt><span jhiTranslate="forestharyanaApp.beatMaster.stateName">State Name</span></dt>
+                <dd>
+                    <span>{{beatMaster.stateName}}</span>
+                </dd>
+                <dt><span jhiTranslate="forestharyanaApp.beatMaster.stateId">State Id</span></dt>
+                <dd>
+                    <span>{{beatMaster.stateId}}</span>
+                </dd>
+                <dt><span jhiTranslate="forestharyanaApp.beatMaster.isActive">Is Active</span></dt>
+                <dd>
+                    <span>{{beatMaster.isActive}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/beat-master', beatMaster.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

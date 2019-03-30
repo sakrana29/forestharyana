@@ -1,0 +1,68 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="forestharyanaApp.rangeMaster.home.title">Range Masters</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-range-master" [routerLink]="['/range-master/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span  jhiTranslate="forestharyanaApp.rangeMaster.home.createLabel">
+            Create new Range Master
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <div class="table-responsive" *ngIf="rangeMasters">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+            <th><span jhiTranslate="global.field.id">ID</span></th>
+            <th><span jhiTranslate="forestharyanaApp.rangeMaster.rangeName">Range Name</span></th>
+            <th><span jhiTranslate="forestharyanaApp.rangeMaster.divisionNmae">Division Nmae</span></th>
+            <th><span jhiTranslate="forestharyanaApp.rangeMaster.divisionId">Division Id</span></th>
+            <th><span jhiTranslate="forestharyanaApp.rangeMaster.circleName">Circle Name</span></th>
+            <th><span jhiTranslate="forestharyanaApp.rangeMaster.circleId">Circle Id</span></th>
+            <th><span jhiTranslate="forestharyanaApp.rangeMaster.stateName">State Name</span></th>
+            <th><span jhiTranslate="forestharyanaApp.rangeMaster.isActive">Is Active</span></th>
+            <th><span jhiTranslate="forestharyanaApp.rangeMaster.stateId">State Id</span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let rangeMaster of rangeMasters ;trackBy: trackId">
+                <td><a [routerLink]="['/range-master', rangeMaster.id, 'view' ]">{{rangeMaster.id}}</a></td>
+                <td>{{rangeMaster.rangeName}}</td>
+                <td>{{rangeMaster.divisionNmae}}</td>
+                <td>{{rangeMaster.divisionId}}</td>
+                <td>{{rangeMaster.circleName}}</td>
+                <td>{{rangeMaster.circleId}}</td>
+                <td>{{rangeMaster.stateName}}</td>
+                <td>{{rangeMaster.isActive}}</td>
+                <td>{{rangeMaster.stateId}}</td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['/range-master', rangeMaster.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/range-master', rangeMaster.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'range-master/'+ rangeMaster.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

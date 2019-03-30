@@ -1,0 +1,24 @@
+{
+    "forestharyanaApp": {
+        "circleMaster": {
+            "home": {
+                "title": "CircleMasters",
+                "createLabel": "नया Circle Master बनाएँ",
+                "createOrEditLabel": "Circle Master बनाएँ या संपादित करें"
+            },
+            "created": "एक नया Circle Master [identifier: {{ param }}] तैयार है",
+            "updated": "एक Circle Master [identifier: {{ param }}] का अद्यतन हुआ है",
+            "deleted": "Circle Master [identifier: {{ param }}] हटा दिया है",
+            "delete": {
+                "question": "Circle Master [id: {{ id }}] हटाने की पुष्टि करें"
+            },
+            "detail": {
+                "title": "Circle Master"
+            },
+            "circleName": "Circle Name",
+            "stateName": "State Name",
+            "stateId": "State Id",
+            "isActive": "Is Active"
+        }
+    }
+}

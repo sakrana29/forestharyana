@@ -1,0 +1,71 @@
+{
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "beatName",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "blockName",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "blockId",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "rangeName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "rangeId",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "divisionName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "divisionId",
+            "fieldType": "UUID"
+        },
+        {
+            "fieldName": "circleName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "circleId",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "stateName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "stateId",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "isActive",
+            "fieldType": "Boolean"
+        }
+    ],
+    "changelogDate": "20190330034624",
+    "dto": "mapstruct",
+    "searchEngine": false,
+    "service": "serviceImpl",
+    "entityTableName": "beat_master",
+    "jpaMetamodelFiltering": false,
+    "pagination": "no"
+}

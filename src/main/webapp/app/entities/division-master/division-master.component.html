@@ -1,0 +1,64 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="forestharyanaApp.divisionMaster.home.title">Division Masters</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-division-master" [routerLink]="['/division-master/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span  jhiTranslate="forestharyanaApp.divisionMaster.home.createLabel">
+            Create new Division Master
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <div class="table-responsive" *ngIf="divisionMasters">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+            <th><span jhiTranslate="global.field.id">ID</span></th>
+            <th><span jhiTranslate="forestharyanaApp.divisionMaster.divisionName">Division Name</span></th>
+            <th><span jhiTranslate="forestharyanaApp.divisionMaster.circleName">Circle Name</span></th>
+            <th><span jhiTranslate="forestharyanaApp.divisionMaster.circleId">Circle Id</span></th>
+            <th><span jhiTranslate="forestharyanaApp.divisionMaster.stateName">State Name</span></th>
+            <th><span jhiTranslate="forestharyanaApp.divisionMaster.stateId">State Id</span></th>
+            <th><span jhiTranslate="forestharyanaApp.divisionMaster.isActive">Is Active</span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let divisionMaster of divisionMasters ;trackBy: trackId">
+                <td><a [routerLink]="['/division-master', divisionMaster.id, 'view' ]">{{divisionMaster.id}}</a></td>
+                <td>{{divisionMaster.divisionName}}</td>
+                <td>{{divisionMaster.circleName}}</td>
+                <td>{{divisionMaster.circleId}}</td>
+                <td>{{divisionMaster.stateName}}</td>
+                <td>{{divisionMaster.stateId}}</td>
+                <td>{{divisionMaster.isActive}}</td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['/division-master', divisionMaster.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/division-master', divisionMaster.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'division-master/'+ divisionMaster.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,68 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+            <h2 id="jhi-circle-master-heading" jhiTranslate="forestharyanaApp.circleMaster.home.createOrEditLabel">Create or edit a Circle Master</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!circleMaster.id">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id"
+                        [(ngModel)]="circleMaster.id" readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="forestharyanaApp.circleMaster.circleName" for="field_circleName">Circle Name</label>
+                    <input type="text" class="form-control" name="circleName" id="field_circleName"
+                        [(ngModel)]="circleMaster.circleName" required/>
+                    <div [hidden]="!(editForm.controls.circleName?.dirty && editForm.controls.circleName?.invalid)">
+                        <small class="form-text text-danger"
+                        [hidden]="!editForm.controls.circleName?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="forestharyanaApp.circleMaster.stateName" for="field_stateName">State Name</label>
+                    <input type="text" class="form-control" name="stateName" id="field_stateName"
+                        [(ngModel)]="circleMaster.stateName" required/>
+                    <div [hidden]="!(editForm.controls.stateName?.dirty && editForm.controls.stateName?.invalid)">
+                        <small class="form-text text-danger"
+                        [hidden]="!editForm.controls.stateName?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="forestharyanaApp.circleMaster.stateId" for="field_stateId">State Id</label>
+                    <input type="text" class="form-control" name="stateId" id="field_stateId"
+                        [(ngModel)]="circleMaster.stateId" required/>
+                    <div [hidden]="!(editForm.controls.stateId?.dirty && editForm.controls.stateId?.invalid)">
+                        <small class="form-text text-danger"
+                        [hidden]="!editForm.controls.stateId?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="forestharyanaApp.circleMaster.isActive" for="field_isActive">Is Active</label>
+                    <input type="checkbox" class="form-control" name="isActive" id="field_isActive"
+                        [(ngModel)]="circleMaster.isActive" />
+                    <div [hidden]="!(editForm.controls.isActive?.dirty && editForm.controls.isActive?.invalid)">
+                        <small class="form-text text-danger"
+                        [hidden]="!editForm.controls.isActive?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

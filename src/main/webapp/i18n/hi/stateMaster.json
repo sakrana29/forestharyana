@@ -1,0 +1,22 @@
+{
+    "forestharyanaApp": {
+        "stateMaster": {
+            "home": {
+                "title": "StateMasters",
+                "createLabel": "नया State Master बनाएँ",
+                "createOrEditLabel": "State Master बनाएँ या संपादित करें"
+            },
+            "created": "एक नया State Master [identifier: {{ param }}] तैयार है",
+            "updated": "एक State Master [identifier: {{ param }}] का अद्यतन हुआ है",
+            "deleted": "State Master [identifier: {{ param }}] हटा दिया है",
+            "delete": {
+                "question": "State Master [id: {{ id }}] हटाने की पुष्टि करें"
+            },
+            "detail": {
+                "title": "State Master"
+            },
+            "stateName": "State Name",
+            "isActive": "Is Active"
+        }
+    }
+}

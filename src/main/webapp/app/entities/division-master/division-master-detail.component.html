@@ -1,0 +1,47 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="divisionMaster">
+            <h2><span jhiTranslate="forestharyanaApp.divisionMaster.detail.title">Division Master</span> {{divisionMaster.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="forestharyanaApp.divisionMaster.divisionName">Division Name</span></dt>
+                <dd>
+                    <span>{{divisionMaster.divisionName}}</span>
+                </dd>
+                <dt><span jhiTranslate="forestharyanaApp.divisionMaster.circleName">Circle Name</span></dt>
+                <dd>
+                    <span>{{divisionMaster.circleName}}</span>
+                </dd>
+                <dt><span jhiTranslate="forestharyanaApp.divisionMaster.circleId">Circle Id</span></dt>
+                <dd>
+                    <span>{{divisionMaster.circleId}}</span>
+                </dd>
+                <dt><span jhiTranslate="forestharyanaApp.divisionMaster.stateName">State Name</span></dt>
+                <dd>
+                    <span>{{divisionMaster.stateName}}</span>
+                </dd>
+                <dt><span jhiTranslate="forestharyanaApp.divisionMaster.stateId">State Id</span></dt>
+                <dd>
+                    <span>{{divisionMaster.stateId}}</span>
+                </dd>
+                <dt><span jhiTranslate="forestharyanaApp.divisionMaster.isActive">Is Active</span></dt>
+                <dd>
+                    <span>{{divisionMaster.isActive}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/division-master', divisionMaster.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>
