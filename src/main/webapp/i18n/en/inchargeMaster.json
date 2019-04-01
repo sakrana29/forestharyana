@@ -1,0 +1,30 @@
+{
+    "forestharyanaApp": {
+        "inchargeMaster": {
+            "home": {
+                "title": "Incharge Masters",
+                "createLabel": "Create a new Incharge Master",
+                "createOrEditLabel": "Create or edit a Incharge Master"
+            },
+            "created": "A new Incharge Master is created with identifier {{ param }}",
+            "updated": "A Incharge Master is updated with identifier {{ param }}",
+            "deleted": "A Incharge Master is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Incharge Master {{ id }}?"
+            },
+            "detail": {
+                "title": "Incharge Master"
+            },
+            "inchargeMasterType": "Incharge Master Type",
+            "inchargeMasterTypeId": "Incharge Master Type Id",
+            "nurseryName": "Nursery Name",
+            "nurseryId": "Nursery Id",
+            "inchargeName": "Incharge Name",
+            "inchargeDesignation": "Incharge Designation",
+            "inchargeMobile": "Incharge Mobile",
+            "chargeTakenFrom": "Charge Taken From",
+            "chargeReleaveDate": "Charge Releave Date",
+            "isActive": "Is Active"
+        }
+    }
+}

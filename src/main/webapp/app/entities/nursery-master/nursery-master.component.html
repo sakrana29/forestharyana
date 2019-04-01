@@ -1,0 +1,86 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="forestharyanaApp.nurseryMaster.home.title">Nursery Masters</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-nursery-master" [routerLink]="['/nursery-master/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span  jhiTranslate="forestharyanaApp.nurseryMaster.home.createLabel">
+            Create new Nursery Master
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <div class="table-responsive" *ngIf="nurseryMasters">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+            <th><span jhiTranslate="global.field.id">ID</span></th>
+            <th><span jhiTranslate="forestharyanaApp.nurseryMaster.circleName">Circle Name</span></th>
+            <th><span jhiTranslate="forestharyanaApp.nurseryMaster.circleId">Circle Id</span></th>
+            <th><span jhiTranslate="forestharyanaApp.nurseryMaster.divisionName">Division Name</span></th>
+            <th><span jhiTranslate="forestharyanaApp.nurseryMaster.divisionId">Division Id</span></th>
+            <th><span jhiTranslate="forestharyanaApp.nurseryMaster.rangeName">Range Name</span></th>
+            <th><span jhiTranslate="forestharyanaApp.nurseryMaster.rangeId">Range Id</span></th>
+            <th><span jhiTranslate="forestharyanaApp.nurseryMaster.blockname">Blockname</span></th>
+            <th><span jhiTranslate="forestharyanaApp.nurseryMaster.blockId">Block Id</span></th>
+            <th><span jhiTranslate="forestharyanaApp.nurseryMaster.beatName">Beat Name</span></th>
+            <th><span jhiTranslate="forestharyanaApp.nurseryMaster.beatId">Beat Id</span></th>
+            <th><span jhiTranslate="forestharyanaApp.nurseryMaster.nurseryName">Nursery Name</span></th>
+            <th><span jhiTranslate="forestharyanaApp.nurseryMaster.nurseryAddress">Nursery Address</span></th>
+            <th><span jhiTranslate="forestharyanaApp.nurseryMaster.nurseryEstablishment">Nursery Establishment</span></th>
+            <th><span jhiTranslate="forestharyanaApp.nurseryMaster.nurseryArea">Nursery Area</span></th>
+            <th><span jhiTranslate="forestharyanaApp.nurseryMaster.sourceOfIrrigation">Source Of Irrigation</span></th>
+            <th><span jhiTranslate="forestharyanaApp.nurseryMaster.soilType">Soil Type</span></th>
+            <th><span jhiTranslate="forestharyanaApp.nurseryMaster.otherDetail">Other Detail</span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let nurseryMaster of nurseryMasters ;trackBy: trackId">
+                <td><a [routerLink]="['/nursery-master', nurseryMaster.id, 'view' ]">{{nurseryMaster.id}}</a></td>
+                <td>{{nurseryMaster.circleName}}</td>
+                <td>{{nurseryMaster.circleId}}</td>
+                <td>{{nurseryMaster.divisionName}}</td>
+                <td>{{nurseryMaster.divisionId}}</td>
+                <td>{{nurseryMaster.rangeName}}</td>
+                <td>{{nurseryMaster.rangeId}}</td>
+                <td>{{nurseryMaster.blockname}}</td>
+                <td>{{nurseryMaster.blockId}}</td>
+                <td>{{nurseryMaster.beatName}}</td>
+                <td>{{nurseryMaster.beatId}}</td>
+                <td>{{nurseryMaster.nurseryName}}</td>
+                <td>{{nurseryMaster.nurseryAddress}}</td>
+                <td>{{nurseryMaster.nurseryEstablishment | date:'medium'}}</td>
+                <td>{{nurseryMaster.nurseryArea}}</td>
+                <td>{{nurseryMaster.sourceOfIrrigation}}</td>
+                <td>{{nurseryMaster.soilType}}</td>
+                <td>{{nurseryMaster.otherDetail}}</td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['/nursery-master', nurseryMaster.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/nursery-master', nurseryMaster.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'nursery-master/'+ nurseryMaster.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+{
+    "forestharyanaApp": {
+        "inchargeMasterType": {
+            "home": {
+                "title": "InchargeMasterTypes",
+                "createLabel": "नया Incharge Master Type बनाएँ",
+                "createOrEditLabel": "Incharge Master Type बनाएँ या संपादित करें"
+            },
+            "created": "एक नया Incharge Master Type [identifier: {{ param }}] तैयार है",
+            "updated": "एक Incharge Master Type [identifier: {{ param }}] का अद्यतन हुआ है",
+            "deleted": "Incharge Master Type [identifier: {{ param }}] हटा दिया है",
+            "delete": {
+                "question": "Incharge Master Type [id: {{ id }}] हटाने की पुष्टि करें"
+            },
+            "detail": {
+                "title": "Incharge Master Type"
+            },
+            "inchargeMasterType": "Incharge Master Type",
+            "isActive": "Is Active"
+        }
+    }
+}

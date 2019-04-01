@@ -1,0 +1,63 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="inchargeMaster">
+            <h2><span jhiTranslate="forestharyanaApp.inchargeMaster.detail.title">Incharge Master</span> {{inchargeMaster.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="forestharyanaApp.inchargeMaster.inchargeMasterType">Incharge Master Type</span></dt>
+                <dd>
+                    <span>{{inchargeMaster.inchargeMasterType}}</span>
+                </dd>
+                <dt><span jhiTranslate="forestharyanaApp.inchargeMaster.inchargeMasterTypeId">Incharge Master Type Id</span></dt>
+                <dd>
+                    <span>{{inchargeMaster.inchargeMasterTypeId}}</span>
+                </dd>
+                <dt><span jhiTranslate="forestharyanaApp.inchargeMaster.nurseryName">Nursery Name</span></dt>
+                <dd>
+                    <span>{{inchargeMaster.nurseryName}}</span>
+                </dd>
+                <dt><span jhiTranslate="forestharyanaApp.inchargeMaster.nurseryId">Nursery Id</span></dt>
+                <dd>
+                    <span>{{inchargeMaster.nurseryId}}</span>
+                </dd>
+                <dt><span jhiTranslate="forestharyanaApp.inchargeMaster.inchargeName">Incharge Name</span></dt>
+                <dd>
+                    <span>{{inchargeMaster.inchargeName}}</span>
+                </dd>
+                <dt><span jhiTranslate="forestharyanaApp.inchargeMaster.inchargeDesignation">Incharge Designation</span></dt>
+                <dd>
+                    <span>{{inchargeMaster.inchargeDesignation}}</span>
+                </dd>
+                <dt><span jhiTranslate="forestharyanaApp.inchargeMaster.inchargeMobile">Incharge Mobile</span></dt>
+                <dd>
+                    <span>{{inchargeMaster.inchargeMobile}}</span>
+                </dd>
+                <dt><span jhiTranslate="forestharyanaApp.inchargeMaster.chargeTakenFrom">Charge Taken From</span></dt>
+                <dd>
+                    <span>{{inchargeMaster.chargeTakenFrom}}</span>
+                </dd>
+                <dt><span jhiTranslate="forestharyanaApp.inchargeMaster.chargeReleaveDate">Charge Releave Date</span></dt>
+                <dd>
+                    <span>{{inchargeMaster.chargeReleaveDate}}</span>
+                </dd>
+                <dt><span jhiTranslate="forestharyanaApp.inchargeMaster.isActive">Is Active</span></dt>
+                <dd>
+                    <span>{{inchargeMaster.isActive}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/incharge-master', inchargeMaster.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

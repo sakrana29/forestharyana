@@ -1,0 +1,37 @@
+{
+    "forestharyanaApp": {
+        "nurseryMaster": {
+            "home": {
+                "title": "Nursery Masters",
+                "createLabel": "Create a new Nursery Master",
+                "createOrEditLabel": "Create or edit a Nursery Master"
+            },
+            "created": "A new Nursery Master is created with identifier {{ param }}",
+            "updated": "A Nursery Master is updated with identifier {{ param }}",
+            "deleted": "A Nursery Master is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Nursery Master {{ id }}?"
+            },
+            "detail": {
+                "title": "Nursery Master"
+            },
+            "circleName": "Circle Name",
+            "circleId": "Circle Id",
+            "divisionName": "Division Name",
+            "divisionId": "Division Id",
+            "rangeName": "Range Name",
+            "rangeId": "Range Id",
+            "blockname": "Blockname",
+            "blockId": "Block Id",
+            "beatName": "Beat Name",
+            "beatId": "Beat Id",
+            "nurseryName": "Nursery Name",
+            "nurseryAddress": "Nursery Address",
+            "nurseryEstablishment": "Nursery Establishment",
+            "nurseryArea": "Nursery Area",
+            "sourceOfIrrigation": "Source Of Irrigation",
+            "soilType": "Soil Type",
+            "otherDetail": "Other Detail"
+        }
+    }
+}

@@ -1,0 +1,91 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="nurseryMaster">
+            <h2><span jhiTranslate="forestharyanaApp.nurseryMaster.detail.title">Nursery Master</span> {{nurseryMaster.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="forestharyanaApp.nurseryMaster.circleName">Circle Name</span></dt>
+                <dd>
+                    <span>{{nurseryMaster.circleName}}</span>
+                </dd>
+                <dt><span jhiTranslate="forestharyanaApp.nurseryMaster.circleId">Circle Id</span></dt>
+                <dd>
+                    <span>{{nurseryMaster.circleId}}</span>
+                </dd>
+                <dt><span jhiTranslate="forestharyanaApp.nurseryMaster.divisionName">Division Name</span></dt>
+                <dd>
+                    <span>{{nurseryMaster.divisionName}}</span>
+                </dd>
+                <dt><span jhiTranslate="forestharyanaApp.nurseryMaster.divisionId">Division Id</span></dt>
+                <dd>
+                    <span>{{nurseryMaster.divisionId}}</span>
+                </dd>
+                <dt><span jhiTranslate="forestharyanaApp.nurseryMaster.rangeName">Range Name</span></dt>
+                <dd>
+                    <span>{{nurseryMaster.rangeName}}</span>
+                </dd>
+                <dt><span jhiTranslate="forestharyanaApp.nurseryMaster.rangeId">Range Id</span></dt>
+                <dd>
+                    <span>{{nurseryMaster.rangeId}}</span>
+                </dd>
+                <dt><span jhiTranslate="forestharyanaApp.nurseryMaster.blockname">Blockname</span></dt>
+                <dd>
+                    <span>{{nurseryMaster.blockname}}</span>
+                </dd>
+                <dt><span jhiTranslate="forestharyanaApp.nurseryMaster.blockId">Block Id</span></dt>
+                <dd>
+                    <span>{{nurseryMaster.blockId}}</span>
+                </dd>
+                <dt><span jhiTranslate="forestharyanaApp.nurseryMaster.beatName">Beat Name</span></dt>
+                <dd>
+                    <span>{{nurseryMaster.beatName}}</span>
+                </dd>
+                <dt><span jhiTranslate="forestharyanaApp.nurseryMaster.beatId">Beat Id</span></dt>
+                <dd>
+                    <span>{{nurseryMaster.beatId}}</span>
+                </dd>
+                <dt><span jhiTranslate="forestharyanaApp.nurseryMaster.nurseryName">Nursery Name</span></dt>
+                <dd>
+                    <span>{{nurseryMaster.nurseryName}}</span>
+                </dd>
+                <dt><span jhiTranslate="forestharyanaApp.nurseryMaster.nurseryAddress">Nursery Address</span></dt>
+                <dd>
+                    <span>{{nurseryMaster.nurseryAddress}}</span>
+                </dd>
+                <dt><span jhiTranslate="forestharyanaApp.nurseryMaster.nurseryEstablishment">Nursery Establishment</span></dt>
+                <dd>
+                    <span>{{nurseryMaster.nurseryEstablishment}}</span>
+                </dd>
+                <dt><span jhiTranslate="forestharyanaApp.nurseryMaster.nurseryArea">Nursery Area</span></dt>
+                <dd>
+                    <span>{{nurseryMaster.nurseryArea}}</span>
+                </dd>
+                <dt><span jhiTranslate="forestharyanaApp.nurseryMaster.sourceOfIrrigation">Source Of Irrigation</span></dt>
+                <dd>
+                    <span>{{nurseryMaster.sourceOfIrrigation}}</span>
+                </dd>
+                <dt><span jhiTranslate="forestharyanaApp.nurseryMaster.soilType">Soil Type</span></dt>
+                <dd>
+                    <span>{{nurseryMaster.soilType}}</span>
+                </dd>
+                <dt><span jhiTranslate="forestharyanaApp.nurseryMaster.otherDetail">Other Detail</span></dt>
+                <dd>
+                    <span>{{nurseryMaster.otherDetail}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/nursery-master', nurseryMaster.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

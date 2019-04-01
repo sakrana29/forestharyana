@@ -1,0 +1,120 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+            <h2 id="jhi-incharge-master-heading" jhiTranslate="forestharyanaApp.inchargeMaster.home.createOrEditLabel">Create or edit a Incharge Master</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!inchargeMaster.id">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id"
+                        [(ngModel)]="inchargeMaster.id" readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="forestharyanaApp.inchargeMaster.inchargeMasterType" for="field_inchargeMasterType">Incharge Master Type</label>
+                    <input type="text" class="form-control" name="inchargeMasterType" id="field_inchargeMasterType"
+                        [(ngModel)]="inchargeMaster.inchargeMasterType" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="forestharyanaApp.inchargeMaster.inchargeMasterTypeId" for="field_inchargeMasterTypeId">Incharge Master Type Id</label>
+                    <input type="text" class="form-control" name="inchargeMasterTypeId" id="field_inchargeMasterTypeId"
+                        [(ngModel)]="inchargeMaster.inchargeMasterTypeId" required/>
+                    <div [hidden]="!(editForm.controls.inchargeMasterTypeId?.dirty && editForm.controls.inchargeMasterTypeId?.invalid)">
+                        <small class="form-text text-danger"
+                        [hidden]="!editForm.controls.inchargeMasterTypeId?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="forestharyanaApp.inchargeMaster.nurseryName" for="field_nurseryName">Nursery Name</label>
+                    <input type="text" class="form-control" name="nurseryName" id="field_nurseryName"
+                        [(ngModel)]="inchargeMaster.nurseryName" required/>
+                    <div [hidden]="!(editForm.controls.nurseryName?.dirty && editForm.controls.nurseryName?.invalid)">
+                        <small class="form-text text-danger"
+                        [hidden]="!editForm.controls.nurseryName?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="forestharyanaApp.inchargeMaster.nurseryId" for="field_nurseryId">Nursery Id</label>
+                    <input type="text" class="form-control" name="nurseryId" id="field_nurseryId"
+                        [(ngModel)]="inchargeMaster.nurseryId" required/>
+                    <div [hidden]="!(editForm.controls.nurseryId?.dirty && editForm.controls.nurseryId?.invalid)">
+                        <small class="form-text text-danger"
+                        [hidden]="!editForm.controls.nurseryId?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="forestharyanaApp.inchargeMaster.inchargeName" for="field_inchargeName">Incharge Name</label>
+                    <input type="text" class="form-control" name="inchargeName" id="field_inchargeName"
+                        [(ngModel)]="inchargeMaster.inchargeName" required/>
+                    <div [hidden]="!(editForm.controls.inchargeName?.dirty && editForm.controls.inchargeName?.invalid)">
+                        <small class="form-text text-danger"
+                        [hidden]="!editForm.controls.inchargeName?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="forestharyanaApp.inchargeMaster.inchargeDesignation" for="field_inchargeDesignation">Incharge Designation</label>
+                    <input type="text" class="form-control" name="inchargeDesignation" id="field_inchargeDesignation"
+                        [(ngModel)]="inchargeMaster.inchargeDesignation" required/>
+                    <div [hidden]="!(editForm.controls.inchargeDesignation?.dirty && editForm.controls.inchargeDesignation?.invalid)">
+                        <small class="form-text text-danger"
+                        [hidden]="!editForm.controls.inchargeDesignation?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="forestharyanaApp.inchargeMaster.inchargeMobile" for="field_inchargeMobile">Incharge Mobile</label>
+                    <input type="text" class="form-control" name="inchargeMobile" id="field_inchargeMobile"
+                        [(ngModel)]="inchargeMaster.inchargeMobile" required/>
+                    <div [hidden]="!(editForm.controls.inchargeMobile?.dirty && editForm.controls.inchargeMobile?.invalid)">
+                        <small class="form-text text-danger"
+                        [hidden]="!editForm.controls.inchargeMobile?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="forestharyanaApp.inchargeMaster.chargeTakenFrom" for="field_chargeTakenFrom">Charge Taken From</label>
+                    <div class="d-flex">
+                        <input id="field_chargeTakenFrom" type="datetime-local" class="form-control" name="chargeTakenFrom" [(ngModel)]="chargeTakenFrom"
+                        />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="forestharyanaApp.inchargeMaster.chargeReleaveDate" for="field_chargeReleaveDate">Charge Releave Date</label>
+                    <div class="d-flex">
+                        <input id="field_chargeReleaveDate" type="datetime-local" class="form-control" name="chargeReleaveDate" [(ngModel)]="chargeReleaveDate"
+                        />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="forestharyanaApp.inchargeMaster.isActive" for="field_isActive">Is Active</label>
+                    <input type="checkbox" class="form-control" name="isActive" id="field_isActive"
+                        [(ngModel)]="inchargeMaster.isActive" />
+                    <div [hidden]="!(editForm.controls.isActive?.dirty && editForm.controls.isActive?.invalid)">
+                        <small class="form-text text-danger"
+                        [hidden]="!editForm.controls.isActive?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -13,6 +13,9 @@
                 "rangeMaster": "Range Master",
                 "blockMaster": "Block Master",
                 "beatMaster": "Beat Master",
+                "nurseryMaster": "Nursery Master",
+                "inchargeMasterType": "Incharge Master Type",
+                "inchargeMaster": "Incharge Master",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {

@@ -1,0 +1,165 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+            <h2 id="jhi-nursery-master-heading" jhiTranslate="forestharyanaApp.nurseryMaster.home.createOrEditLabel">Create or edit a Nursery Master</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!nurseryMaster.id">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id"
+                        [(ngModel)]="nurseryMaster.id" readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="forestharyanaApp.nurseryMaster.circleName" for="field_circleName">Circle Name</label>
+                    <input type="text" class="form-control" name="circleName" id="field_circleName"
+                        [(ngModel)]="nurseryMaster.circleName" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="forestharyanaApp.nurseryMaster.circleId" for="field_circleId">Circle Id</label>
+                    <input type="text" class="form-control" name="circleId" id="field_circleId"
+                        [(ngModel)]="nurseryMaster.circleId" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="forestharyanaApp.nurseryMaster.divisionName" for="field_divisionName">Division Name</label>
+                    <input type="text" class="form-control" name="divisionName" id="field_divisionName"
+                        [(ngModel)]="nurseryMaster.divisionName" required/>
+                    <div [hidden]="!(editForm.controls.divisionName?.dirty && editForm.controls.divisionName?.invalid)">
+                        <small class="form-text text-danger"
+                        [hidden]="!editForm.controls.divisionName?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="forestharyanaApp.nurseryMaster.divisionId" for="field_divisionId">Division Id</label>
+                    <input type="text" class="form-control" name="divisionId" id="field_divisionId"
+                        [(ngModel)]="nurseryMaster.divisionId" required/>
+                    <div [hidden]="!(editForm.controls.divisionId?.dirty && editForm.controls.divisionId?.invalid)">
+                        <small class="form-text text-danger"
+                        [hidden]="!editForm.controls.divisionId?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="forestharyanaApp.nurseryMaster.rangeName" for="field_rangeName">Range Name</label>
+                    <input type="text" class="form-control" name="rangeName" id="field_rangeName"
+                        [(ngModel)]="nurseryMaster.rangeName" required/>
+                    <div [hidden]="!(editForm.controls.rangeName?.dirty && editForm.controls.rangeName?.invalid)">
+                        <small class="form-text text-danger"
+                        [hidden]="!editForm.controls.rangeName?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="forestharyanaApp.nurseryMaster.rangeId" for="field_rangeId">Range Id</label>
+                    <input type="text" class="form-control" name="rangeId" id="field_rangeId"
+                        [(ngModel)]="nurseryMaster.rangeId" required/>
+                    <div [hidden]="!(editForm.controls.rangeId?.dirty && editForm.controls.rangeId?.invalid)">
+                        <small class="form-text text-danger"
+                        [hidden]="!editForm.controls.rangeId?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="forestharyanaApp.nurseryMaster.blockname" for="field_blockname">Blockname</label>
+                    <input type="text" class="form-control" name="blockname" id="field_blockname"
+                        [(ngModel)]="nurseryMaster.blockname" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="forestharyanaApp.nurseryMaster.blockId" for="field_blockId">Block Id</label>
+                    <input type="text" class="form-control" name="blockId" id="field_blockId"
+                        [(ngModel)]="nurseryMaster.blockId" required/>
+                    <div [hidden]="!(editForm.controls.blockId?.dirty && editForm.controls.blockId?.invalid)">
+                        <small class="form-text text-danger"
+                        [hidden]="!editForm.controls.blockId?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="forestharyanaApp.nurseryMaster.beatName" for="field_beatName">Beat Name</label>
+                    <input type="text" class="form-control" name="beatName" id="field_beatName"
+                        [(ngModel)]="nurseryMaster.beatName" required/>
+                    <div [hidden]="!(editForm.controls.beatName?.dirty && editForm.controls.beatName?.invalid)">
+                        <small class="form-text text-danger"
+                        [hidden]="!editForm.controls.beatName?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="forestharyanaApp.nurseryMaster.beatId" for="field_beatId">Beat Id</label>
+                    <input type="text" class="form-control" name="beatId" id="field_beatId"
+                        [(ngModel)]="nurseryMaster.beatId" required/>
+                    <div [hidden]="!(editForm.controls.beatId?.dirty && editForm.controls.beatId?.invalid)">
+                        <small class="form-text text-danger"
+                        [hidden]="!editForm.controls.beatId?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="forestharyanaApp.nurseryMaster.nurseryName" for="field_nurseryName">Nursery Name</label>
+                    <input type="text" class="form-control" name="nurseryName" id="field_nurseryName"
+                        [(ngModel)]="nurseryMaster.nurseryName" required/>
+                    <div [hidden]="!(editForm.controls.nurseryName?.dirty && editForm.controls.nurseryName?.invalid)">
+                        <small class="form-text text-danger"
+                        [hidden]="!editForm.controls.nurseryName?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="forestharyanaApp.nurseryMaster.nurseryAddress" for="field_nurseryAddress">Nursery Address</label>
+                    <input type="text" class="form-control" name="nurseryAddress" id="field_nurseryAddress"
+                        [(ngModel)]="nurseryMaster.nurseryAddress" required/>
+                    <div [hidden]="!(editForm.controls.nurseryAddress?.dirty && editForm.controls.nurseryAddress?.invalid)">
+                        <small class="form-text text-danger"
+                        [hidden]="!editForm.controls.nurseryAddress?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="forestharyanaApp.nurseryMaster.nurseryEstablishment" for="field_nurseryEstablishment">Nursery Establishment</label>
+                    <div class="d-flex">
+                        <input id="field_nurseryEstablishment" type="datetime-local" class="form-control" name="nurseryEstablishment" [(ngModel)]="nurseryEstablishment"
+                        />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="forestharyanaApp.nurseryMaster.nurseryArea" for="field_nurseryArea">Nursery Area</label>
+                    <input type="number" class="form-control" name="nurseryArea" id="field_nurseryArea"
+                        [(ngModel)]="nurseryMaster.nurseryArea" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="forestharyanaApp.nurseryMaster.sourceOfIrrigation" for="field_sourceOfIrrigation">Source Of Irrigation</label>
+                    <input type="text" class="form-control" name="sourceOfIrrigation" id="field_sourceOfIrrigation"
+                        [(ngModel)]="nurseryMaster.sourceOfIrrigation" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="forestharyanaApp.nurseryMaster.soilType" for="field_soilType">Soil Type</label>
+                    <input type="text" class="form-control" name="soilType" id="field_soilType"
+                        [(ngModel)]="nurseryMaster.soilType" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="forestharyanaApp.nurseryMaster.otherDetail" for="field_otherDetail">Other Detail</label>
+                    <input type="text" class="form-control" name="otherDetail" id="field_otherDetail"
+                        [(ngModel)]="nurseryMaster.otherDetail" />
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

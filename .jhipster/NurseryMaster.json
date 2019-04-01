@@ -1,0 +1,110 @@
+{
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "circleName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "circleId",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "divisionName",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "divisionId",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "rangeName",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "rangeId",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "blockname",
+            "fieldType": "String",
+            "fieldValidateRules": []
+        },
+        {
+            "fieldName": "blockId",
+            "fieldType": "UUID",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "beatName",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "beatId",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "nurseryName",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "nurseryAddress",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "nurseryEstablishment",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "nurseryArea",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "sourceOfIrrigation",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "soilType",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "otherDetail",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20190401054737",
+    "dto": "mapstruct",
+    "searchEngine": false,
+    "service": "serviceImpl",
+    "entityTableName": "nursery_master",
+    "jpaMetamodelFiltering": false,
+    "pagination": "no"
+}

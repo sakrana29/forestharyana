@@ -1,0 +1,46 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+            <h2 id="jhi-incharge-master-type-heading" jhiTranslate="forestharyanaApp.inchargeMasterType.home.createOrEditLabel">Create or edit a Incharge Master Type</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!inchargeMasterType.id">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id"
+                        [(ngModel)]="inchargeMasterType.id" readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="forestharyanaApp.inchargeMasterType.inchargeMasterType" for="field_inchargeMasterType">Incharge Master Type</label>
+                    <input type="text" class="form-control" name="inchargeMasterType" id="field_inchargeMasterType"
+                        [(ngModel)]="inchargeMasterType.inchargeMasterType" required/>
+                    <div [hidden]="!(editForm.controls.inchargeMasterType?.dirty && editForm.controls.inchargeMasterType?.invalid)">
+                        <small class="form-text text-danger"
+                        [hidden]="!editForm.controls.inchargeMasterType?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="forestharyanaApp.inchargeMasterType.isActive" for="field_isActive">Is Active</label>
+                    <input type="checkbox" class="form-control" name="isActive" id="field_isActive"
+                        [(ngModel)]="inchargeMasterType.isActive" />
+                    <div [hidden]="!(editForm.controls.isActive?.dirty && editForm.controls.isActive?.invalid)">
+                        <small class="form-text text-danger"
+                        [hidden]="!editForm.controls.isActive?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
