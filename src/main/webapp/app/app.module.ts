@@ -20,7 +20,7 @@ import { ForestharyanaEntityModule } from './entities/entity.module';
 import * as moment from 'moment';
 // jhipster-needle-angular-add-module-import JHipster will add new module here
 import { JhiMainComponent, NavbarComponent, FooterComponent, PageRibbonComponent, ActiveMenuDirective, ErrorComponent } from './layouts';
-import { NurseryMasterComponent } from './fnms/nursery-master/nursery-master/nursery-master.component';
+import { NurseryComponent } from './fnms/nursery/nursery.component';
 
 @NgModule({
     imports: [
@@ -48,7 +48,7 @@ import { NurseryMasterComponent } from './fnms/nursery-master/nursery-master/nur
         PageRibbonComponent,
         ActiveMenuDirective,
         FooterComponent,
-        NurseryMasterComponent
+        NurseryComponent
     ],
     providers: [
         {
